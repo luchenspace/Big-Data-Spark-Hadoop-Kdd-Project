@@ -2,17 +2,13 @@
 
 This document describes how to run the Decision Tree and Logistic Regression programs using Apache Spark on ECS.
 
-=================================================
 1. Prerequisites
-=================================================
 - Access to an ECS machine (e.g., CO246A-1)
 - Dataset file: kdd.data
 - Code files: decision_tree.py and logistic_regression.py
 - Spark environment correctly configured on the ECS node
 
-=================================================
 2. Python Dependencies
-=================================================
 The following Python modules are required and are preinstalled on ECS:
 
 - argparse
@@ -23,10 +19,7 @@ The following Python modules are required and are preinstalled on ECS:
 If testing locally, install with:
     pip install numpy pyspark
 
-=================================================
 3. Setup Instructions
-=================================================
-
 (1) SSH into the ECS node:
     ssh CO246A-1
 
@@ -42,10 +35,7 @@ If testing locally, install with:
 (5) Ensure the dataset is located at:
     /user/<your_username>/inputs/kdd.data
 
-=================================================
 4. Running the Programs
-=================================================
-
 Option 1: Run both models sequentially:
 
     spark-submit --master yarn decision_tree.py \
@@ -65,9 +55,7 @@ Option 2: Run models individually:
         --input hdfs:///user/<your_username>/inputs/kdd.data \
         --output hdfs:///user/<your_username>/output/output_minimal
 
-=================================================
 5. Output
-=================================================
 Each program performs 10 runs with different random seeds and writes results as a CSV file to the specified HDFS output directory.
 
 To view the result:
@@ -76,10 +64,7 @@ To view the result:
 To download the result:
     hdfs dfs -get <output_path>
 
-=================================================
 6. Managing HDFS Files (Optional)
-=================================================
-
 To list the files in your HDFS directory:
 
     hdfs dfs -ls /user/<your_username>/inputs
