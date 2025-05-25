@@ -79,6 +79,4 @@ To replace a file (delete first, then upload the new version):
 
 Note: The `-rm` command is required because `hdfs dfs -put` does not automatically overwrite existing files.
 
-=================================================
 End of Readme
-=================================================
