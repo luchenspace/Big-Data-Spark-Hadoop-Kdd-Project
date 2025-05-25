@@ -1,8 +1,5 @@
 # Big-Data-Spark-Hadoop-Kdd-Project
 
-AIML427 Assignment 3 - Readme.txt
-Group 16: Judy Wang (300389640), Lu Chen (300668974), Qi Liu (300662252)
-
 This document describes how to run the Decision Tree and Logistic Regression programs using Apache Spark on ECS.
 
 =================================================
